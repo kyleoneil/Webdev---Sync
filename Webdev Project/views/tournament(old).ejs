@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Welcome!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style type="text/css">
+body{
+background:url(crowd.png)no-repeat center center fixed;
+background-size: cover;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.navbar-default{
+	padding: 1%;
+	background-color: black;
+	border-color: black;
+
+}
+#active{
+	font-family: 'Roboto',sans-serif; 
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+.log{
+	font-size: 20px;
+	font-family: 'Roboto',sans-serif;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#all {
+  transition: margin-left .5s;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*<-- TOURNAMENT CLASSES -->*/
+.divTextPadding {
+	padding: 5% 18% 0% 18%;
+}
+
+.black_Background {
+	background-color: black;
+}
+
+.Tourna_TextColor {
+	color: #FDA713;
+}
+
+.Tourna_btn {
+	background-color: #080B19;color: #9650FE;
+}
+
+.caption_TournaColor{
+	background-color: #0E132B;
+}
+
+.Tourna_CellPadding {
+	padding: 10% 18% 0% 18%;
+}
+
+.Container_TournaStyle {
+	background-color:rgb(62, 131, 124, .3);
+	border-radius: 50px;
+	border-top-style: groove;
+	border-bottom-style: groove;
+	border-color: #0F1B83;
+}
+
+.Jumbotron_TournaStyle{
+	background-color:rgb(255, 0, 0,0.0);
+	color:#2FE65A;
+	text-align:center;
+	margin-top:1%;
+}
+
+.Text_Left {
+	text-align: left;
+}
+
+/*<-- RECRUITMENT CLASSES -->*/
+
+/*blah balh blah blah*/
+
+.contacts{
+  color: white;
+  font-family: 'Roboto',sans-serif; 
+}
+.contacticon{
+  height: 13%;
+  width: 13%;
+  padding: 2%;
+}
+</style>
+</head>
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="mainPage.html">Main</a>
+  <a href="tournament.html">Tournaments</a>
+  <a href="playerrecruitment.html">Player Recruitment</a>
+  <a href="teamapp.html">Team Application</a>
+  <a href="aboutus2.html">About Us</a>
+</div>
+
+<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="log"><a href="login.html" style="color:white">Login</a></li>
+         <li class="log"><a href="signup.html" style="color:white">Signup</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+	<div class="jumbotron jumbotron-fluid Jumbotron_TournaStyle">
+		<div class="container Container_TournaStyle">
+		  <p class="lead">To Battlestations! Stream Live ESports</p>
+		  <h1 class="display-4">Tournaments</h1>
+		</div>
+
+		<div class="divTextPadding">
+			<p class="lead Tourna_TextColor Text_Left">Esports Tournaments | Live Gameplay DOTA 2</p>
+			<hr class="my-4">
+		</div>
+
+	  	<div class="container">
+		  	<div class="row">
+		  		<div class="col-xl-6 col-md-2"></div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://pmcvariety.files.wordpress.com/2018/07/dota-2-stunned.jpg?w=1000&h=563&crop=1" alt="Tournament1">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://images.anandtech.com/doci/12736/dota2.jpg" alt="Tournament2">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://images.egbcdn.net/news/20190409bc90775ea9daf998ccf5521c6c2e6808.jpeg" alt="Tournament3">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://www.ebetfinder.com/wp-content/uploads/2016/11/dota-2-gameplay-ebetfinder-resized.jpg" alt="Tournament4">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2"></div>
+
+			</div>
+		</div>
+
+		<div class="divTextPadding">
+			<p class="lead Tourna_TextColor" style="text-align: left;">Esports Tournaments | Live Gameplay CSGO</p>
+			<hr class="my-4">
+		</div>
+
+	  	<div class="container">
+		  	<div class="row">
+		  		<div class="col-xl-6 col-md-2"></div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://pmcvariety.files.wordpress.com/2018/07/dota-2-stunned.jpg?w=1000&h=563&crop=1" alt="Tournament1">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://images.anandtech.com/doci/12736/dota2.jpg" alt="Tournament2">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://images.egbcdn.net/news/20190409bc90775ea9daf998ccf5521c6c2e6808.jpeg" alt="Tournament3">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2">
+			    	<a href="#" class="thumbnail black_Background">
+			      	<img src="https://www.ebetfinder.com/wp-content/uploads/2016/11/dota-2-gameplay-ebetfinder-resized.jpg" alt="Tournament4">
+			    	</a>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2"></div>
+			</div>
+		</div>
+
+		<div class="Tourna_CellPadding">
+			<p class="lead Tourna_TextColor">Available Sync Tournaments</p>
+			<div class="row">
+				<div class="col-xl-6 col-md-2"></div>
+			  	<div class="col-xl-6 col-md-4">
+				    <div class="thumbnail black_Background">
+				      <img src="https://images.egbcdn.net/news/20190409bc90775ea9daf998ccf5521c6c2e6808.jpeg" alt="Tournament3">
+				      <div class="caption caption_TournaColor">
+				      	<div class="Tourna_TextColor">
+					      	<h4>DOTA 2</h4>
+					        <h3 class="display-4">Logical Tournament</h3>
+					        <h4>Prize Pool: $$$$$$</h4>
+					        <h5>Registration: 10/30/19 - 12/25/19</h5>
+				        </div>
+				        <a href="#" class="btn btn-default Tourna_btn" role="button">Team Application</a>
+				      </div>
+				    </div>
+			  	</div>
+			  	<div class="col-xl-6 col-md-4">
+			    	<div class="thumbnail black_Background">
+				      <img src="https://images.egbcdn.net/news/20190409bc90775ea9daf998ccf5521c6c2e6808.jpeg" alt="Tournament3">
+				      <div class="caption caption_TournaColor">
+				      	<div class="Tourna_TextColor">
+					      	<h4>CSGO</h4>
+					        <h3 class="display-4">Logical Tournament</h3>
+					        <h4>Prize Pool: $$$$$$</h4>
+					        <h5>Registration: 10/30/19 - 12/25/19</h5>
+					        <a href="#" class="btn btn-default Tourna_btn" role="button">Team Application</a>
+				    	</div>
+				      </div>
+				    </div>
+			  	</div>
+			  	<div class="col-xl-6 col-md-2"></div>
+			</div>
+
+		</div>
+	</div>
+  <footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%;margin-left:-1%;margin-right:-1%">
+
+  <div class="container-fluid" style="margin-top:-2%">
+     <div class="row">
+          <h3 style="font-family: 'McLaren', cursive;color:white;padding:2%;text-align:center">Contact us</h3>
+             <ul class="list-inline" style="margin-left:10%;margin-right:5%" >
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <li class="contacts">  <img src="email.png" class="contacticon">kyleoneil05@gmail.com</li>
+                  <li class="contacts"> <img src="email.png" class="contacticon">eunieljamero01@gmail.com</li>
+                </div>
+                  <div class="col-md-3 col-sm-6">
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09958930663 (Globe)</li>
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09239269580 (Sun)</li>
+                   <li class="contacts"><img src="phone.png" class="contacticon">09182408852 (Smart)</li>
+                  </div>
+     
+               </ul>
+      </div>
+
+  </div>
+  <div class="text-center" style="color: white;margin-top:1%">© 2018 Copyright:
+    <a href="landing.html"> Sync.com</a>
+  </div>
+
+</footer>
+</div>
+
+
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("all").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("all").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>

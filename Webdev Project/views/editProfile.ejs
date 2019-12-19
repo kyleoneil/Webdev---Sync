@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Your Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.navbar-default{
+	padding: 1%;
+	background-color: black;
+	border-color: black;
+
+}
+#active{
+	font-family: 'Roboto',sans-serif; 
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+.log{
+	font-size: 20px;
+	font-family: 'Roboto',sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#all {
+  transition: margin-left .5s;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*<-- Global CLASSES -->*/
+
+.Global_WhiteText{
+	color: white;
+}
+
+/*<-- TOURNAMENT CLASSES -->*/
+.divTextPadding {
+	padding: 5% 18% 0% 18%;
+}
+
+.black_Background {
+	background-color: black;
+}
+
+.Tourna_TextColor {
+	color: #FDA713;
+}
+
+.Tourna_btn {
+	background-color: #080B19;color: #9650FE;
+}
+
+.caption_TournaColor{
+	background-color: #0E132B;
+}
+
+.Tourna_CellPadding {
+	padding: 10% 18% 0% 18%;
+}
+
+.Container_TournaStyle {
+	background-color:rgb(62, 131, 124, .3);
+	border-radius: 50px;
+	border-top-style: groove;
+	border-bottom-style: groove;
+	border-color: #0F1B83;
+}
+
+.Jumbotron_TournaStyle{
+	background-color:rgb(255, 0, 0,0.0);
+	color:#2FE65A;
+	text-align:center;
+	margin-top:1%;
+}
+
+.Text_Left {
+	text-align: left;
+}
+
+/*<-- Player Profile CLASSES -->*/
+.EmptyMargin{
+	margin: 0%;
+	margin-bottom: 0px;
+}
+
+.RpImageSize{
+	width: 100%;
+	height: 100%;
+}
+
+.RpBoxTop{
+	border-color: #160A7F;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-width: 2px;
+	margin: 0px;
+}
+
+.RpBoxMid{
+	border-color: #160A7F;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-width: 2px;
+	margin: 0px;
+}
+.RpBoxBottom{
+	border-color: #160A7F;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-width: 2px;
+	margin: 0px;
+}
+
+</style>
+</head>
+<body style = "background:url(crowd.png)no-repeat center center;background-size: cover">
+	
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="/main">Main</a>
+	<a href="/tournaments">Tournaments</a>
+	<a href="/Recruitment">Player Recruitment</a>
+	<a href="/application">Team Application</a>
+	<a href="/aboutus2">About Us</a>
+</div>	
+
+<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="log"><a href="/ownProfile" style="color:white">Profile</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+	<div class="jumbotron jumbotron-fluid Jumbotron_TournaStyle">
+		<div style="background-color: rgb(1, 1, 1, 0.7); padding: 3% 0% 10% 0%; border-top-right-radius: 10%;border-top-left-radius: 10%;">
+			<div class="container Container_TournaStyle">
+			  <h1 class="display-4">Player Profile</h1>
+			</div>
+
+
+			<div class="divTextPadding">
+				<div class="row">
+					<div class="col-xl-12 col-md-6" style="padding-top: 3%;">
+						<h4 class="Text_Left" style="color: gray;">Player</h4>
+						<h2 class="display-4 Tourna_TextColor Text_Left EmptyMargin"> <%= User.username %> </h2>
+						<p class="lead Tourna_TextColor Text_Left EmptyMargin" style="color: gray;">Country:<%= User.Country%></p>
+						
+					</div>
+
+					<div class="col-xl-12 col-md-6">
+						<!-- -->
+
+			<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#Game" style="background-color: rgb(0,0,0,0); border-right-style: none; border-left-style: none; margin-bottom: 2%;"><span style="color: gray;">Main Game:</span><H1 style="margin-top: 0%;" >DOTA 2</H1></button>
+						<a href="/team_info" class="btn btn-default Tourna_btn" >View Team</a>
+
+					<!-- Modal -->
+          <div class="modal fade" id="Game" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content" style="color: black;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h3 class="modal-title" style="color: black;">DOTA 2</h3>
+
+                </div>
+                <div class="modal-body">
+                      <!-- <div class="modal-header"> -->
+                      <div class="card card-body">
+                        Medal: Divine<br>
+                        MMR: 3300<br>
+                        Best Hero (All Time): Crystal Maiden<br>
+                        Favored Role: Position 4<br>
+                      </div>
+                      <!-- </div>       -->
+                </div> <!-- /Modal-Body -->
+              </div> <!-- /Modal-Content -->
+            </div> <!-- /Modal-Dialogue -->
+          </div> <!-- /Modal -->
+						<!-- -->
+					</div>
+				</div>
+
+				<hr class="my-4" style=" margin-top: 1%;">
+
+				<div class="row">
+					<div class="col-xl-12 col-md-6">
+						<div class="thumbnail black_Background">
+							<img src="https://pmcvariety.files.wordpress.com/2018/07/dota-2-stunned.jpg?w=1000&h=563&crop=1">
+						</div>
+						<div>
+							<h5 class="RpBoxTop" style="color: gray;">Played Games:</h5>
+							<h3 class="RpBoxBottom" style="color: #ffa652;">10,232</h3>		<!-- Player Game Profile -->
+							<h5 class="RpBoxMid" style="color: gray;">Player Status:</h5>
+							<h3 class="RpBoxBottom">ACTIVE</h3>
+						</div>
+						<div>
+							
+						</div>
+					</div>
+					<div class="col-xl-12 col-md-6" style="background-color: rgb(7, 27, 55, .95); border-top-right-radius: 25%; border-top-left-radius: 8%; border-bottom-left-radius: 25%; border-width: 50%; border-color: green; border-style: groove; padding-bottom: 6%;">
+						<h3 class="display-4 Tourna_TextColor">Background Information</h3>
+						<div class="container-fluid">
+
+
+              <form action="/SaveProfile" method="post" autocomplete="off">
+
+                <div class="input-group input-group-sm" style="margin-bottom: 2%;">
+                  <span class="input-group-addon" id="sizing-addon3">Country</span>
+                  <input type="text" name="country" class="form-control" placeholder="Update Country" aria-describedby="sizing-addon3" value="<%= User.Country%>">
+                </div>
+                <div class="input-group input-group-sm" style="margin-bottom: 2%;">
+                  <span class="input-group-addon" id="sizing-addon3">Age</span>
+                  <input type="text" name="age" class="form-control" placeholder="Update Age" aria-describedby="sizing-addon3" value="<%= User.Age%>">
+                </div>
+                <div class="input-group input-group-sm" style="margin-bottom: 2%;">
+                  <span class="input-group-addon" id="sizing-addon3">Address</span>
+                  <input type="text" name="address" class="form-control" placeholder="Update Workplace Address.." aria-describedby="sizing-addon3" value="<%= User.Address%>">
+                </div>
+
+                <div class="row">
+                  <div style="left: 33%; position: absolute; margin-top: 1%;">
+                    <button type="submit" class="btn btn-default Tourna_btn">Save</button>
+                  </div>
+                  <div style="left: 50%; position: absolute; margin-top: 1%;">
+                    <a type="button" href="/ownProfile" class="btn btn-default Tourna_btn">Cancel</a>
+                  </div>
+                </div> <!-- /Row -->
+                
+              </form>
+
+              
+						</div>
+					</div>
+				</div> <!-- /Row -->
+					<div class="col-xl-12 col-md-12">
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%;margin-left:-1%;margin-right:-1%">
+
+	  <div class="container-fluid" style="margin-top:-2%">
+	     <div class="row">
+	     	<h3 style="font-family: 'McLaren', cursive;color:white;padding:2%;text-align:center">Contact us</h3>
+
+	    	<ul class="list-inline" style="margin-left:10%;margin-right:5%" >
+	        <div class="col-md-3 col-sm-6"></div>
+	        <div class="col-md-3 col-sm-6">
+	        	<li class="contacts">  <img src="pics/email.png" class="contacticon">kyleoneil05@gmail.com</li>
+	          <li class="contacts"> <img src="pics/email.png" class="contacticon">eunieljamero01@gmail.com</li>
+	        </div>
+	        <div class="col-md-3 col-sm-6">
+	          <li class="contacts"> <img src="pics/phone.png" class="contacticon">09958930663 (Globe)</li>
+	          <li class="contacts"> <img src="pics/phone.png" class="contacticon">09239269580 (Sun)</li>
+	          <li class="contacts"><img src="pics/phone.png" class="contacticon">09182408852 (Smart)</li>
+	        </div>
+	      </ul>
+
+	    </div>
+	  </div>
+	  
+	  <div class="text-center" style="color: white;margin-top:1%">© 2018 Copyright:
+	    <a href="landing.html"> Sync.com</a>
+	  </div>
+
+	</footer>
+</div>
+
+
+
+<script type="text/javascript">
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("all").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("all").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>

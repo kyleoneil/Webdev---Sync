@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=McLaren&display=swap");
+body{
+background:url(crowd.png)no-repeat center center fixed;
+background-size: cover;
+}
+.r-link{
+  --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+  --uirLinkTextColor: var(--rLinkTextColor);
+  --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+  display: var(--uirLinkDisplay) !important;
+  color: var(--uirLinkTextColor) !important;
+  text-decoration: var(--uirLinkTextDecoration) !important;
+}
+
+.ai-element_type1{
+  --uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+  --uiaiElementLineColor: var(--aiElementLineColor, #000);  
+}
+
+.ai-element_type1::before, 
+.ai-element_type1::after{
+  width: 100%;
+  height: var(--uiaiElementLineWeight);
+  left: 0;
+}
+
+.ai-element_type1::before{
+  top: 0;
+}
+
+.ai-element_type1::after{
+  bottom: 0;
+}
+
+.ai-element_type1 .ai-element__label::before,
+.ai-element_type1 .ai-element__label::after{
+  width: var(--uiaiElementLineWeight);
+  height: 100%;
+  top: 0;
+}
+
+.ai-element_type1 .ai-element__label::before{
+  left: 0;
+}
+
+.ai-element_type1 .ai-element__label::after{
+  right: 0;
+}
+
+.ai-element_type1::before,
+.ai-element_type1::after,
+.ai-element_type1 .ai-element__label::before,
+.ai-element_type1 .ai-element__label::after{
+  content: "";     
+  background-color: var(--uiaiElementLineColor);
+  position: absolute; 
+  opacity: 1;
+
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.ai-element_type1:hover::before,
+.ai-element_type1:hover::after,
+.ai-element_type1:hover .ai-element__label::before,
+.ai-element_type1:hover .ai-element__label::after{
+  opacity: 0;
+}
+
+.ai-element{
+  --uiaiElementDisplay: var(--aiElementDisplay, inline-flex); 
+  --uiaiElementPadding: var(--aiElementPadding, var(--aiElementPaddingTop, 0) var(--aiElementPaddingRight, 0) var(--aiElementPaddingBottom, 0) var(--aiElementPaddingLeft, 0));
+  --uiaiElementColor: var(--aiElementColor);
+
+  display: var(--uiaiElementDisplay);
+  position: relative;
+  overflow: hidden;
+
+}
+
+a.ai-element{
+  padding: var(--uiaiElementPadding);
+    padding: 4%;
+}
+
+button.ai-element{
+  --rButtonPadding: var(--uiaiElementPadding);  
+}
+
+.ai-element__label{
+  color: var(--uiaiElementColor);
+}
+
+.ai-element1::before,
+.ai-element1::after,
+.ai-element1 .ai-element__label::before,
+.ai-element1 .ai-element__label::after{
+  transform: translate3d(0, 0, 0);
+  transition-timing-function: ease-out;
+  transition-duration: .2s, .15s;
+}
+
+.ai-element1:hover::before,
+.ai-element1:hover::after,
+.ai-element1:hover .ai-element__label::before,
+.ai-element1:hover .ai-element__label::after{
+  transition-duration: .25s;
+}
+
+.ai-element1:hover::before{
+  transform: translate3d(-105%, 0, 0);
+}
+
+.ai-element1:hover::after{
+  transform: translate3d(105%, 0, 0);
+}
+
+.ai-element1:hover .ai-element__label::before{
+  transform: translate3d(0%, -100%, 0);
+}
+
+.ai-element1:hover .ai-element__label::after{
+  transform: translate3d(0%, 100%, 0);
+}
+.navbar-default{
+	padding: 1%;
+	background-color: black;
+	border-color: black;
+
+}
+#active{
+	font-family: 'Roboto',sans-serif; 
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+.log{
+	font-size: 20px;
+	font-family: 'Roboto',sans-serif;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#all {
+  transition: margin-left .5s;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+:root {
+  --mainColor:white;
+}
+.centerlinks {
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 29%;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 60px;
+
+ background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: white;
+  border-color: black;
+  text-decoration: none;
+  transition: background-size .2s;
+   border-style: groove;
+
+}
+.thumbnail{
+  background-color:rgb(255, 0, 0,0.0);
+  border-color:rgb(255, 0, 0,0.0);
+  width: 50%;
+
+  text-align: center;
+  margin-left: 10%;
+}
+.lboxes{
+ border-color: white;
+ border-left: 50px;
+
+}
+.contacts{
+  color: white;
+  font-family: 'Roboto',sans-serif; 
+}
+.contacticon{
+  height: 13%;
+  width: 13%;
+  padding: 2%;
+}
+
+.contacticon2{
+  height: 13%;
+  width: 10%;
+  padding: 2%;
+}
+
+
