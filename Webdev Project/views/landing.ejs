@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Sync!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+
+
+
+a:hover {
+  background-size: 1px 100%;
+  text-decoration: none;
+ color:black;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/landing">Main</a>
+  <a href="/login">Tournaments</a>
+  <a href="/login">Player Recruitment</a>
+  <a href="/login">Team Application</a>
+  <a href="/aboutus">About Us</a>
+</div>
+
+<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="log"><a href="/login" style="color:white">Login</a></li>
+         <li class="log"><a href="/signup" style="color:white">Signup</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" style="background-color:rgb(255, 0, 0,0.0);color:white;text-align:center;margin-top:5%">
+  <div class="container">
+    <h1 class="display-4" style="font-family:Quicksand,sans-serif">Welcome to the Grandoise Arena</h1>
+    <p class="lead" style="font-family:Quicksand,sans-serif;padding:2.5%">Compete with over <span style="color:red">30 million</span> Filipino Gamers</p>
+    <button type="button" onclick="window.location.href = '/login';"class="btn btn-default btn-transparent" style="background-color:rgb(105, 105, 105,0.2);color:white;font-family:Quicksand,sans-serif">
+      Join the battle!</button>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="background-color: #110c11;padding:1%;margin-top:5%">
+<div class="row">
+<div class="col-md-6 " >
+     <a href="/login"class="centerlinks">Tournaments</a>
+	  <img src="tourna.png" style="height:500px;width:100%">
+
+</div>
+<div class ="col-md-6">
+      <a href="/login"class="centerlinks">Create a Team</a>
+	<img src="team.png" style="height:500px;width:100%">
+</div>
+</div>
+
+<div class="row" style="margin-top:2%">
+<div class="col-md-6" >
+    <a href="/login"class="centerlinks" style="margin-left:37.5%">Players</a>
+	  <img src="player.png" style="height:500px;width:100%">
+</div>
+<div class ="col-md-6">
+    <a href="/login"class="centerlinks">Join a Squad</a>
+	<img src="teamcreate.png" style="height:500px;width:100%">
+</div>
+</div>
+
+</div>
+
+
+
+<footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%">
+
+  <div class="container">
+<div class="embed-responsive embed-responsive-16by9 mb-124" >
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Hbc3M7rLhhc"
+            allowfullscreen></iframe>
+</div>
+    <ul class="list-inline text-center ">
+      <li >
+        <h5 style="color: white">Register for free</h5>
+      </li>
+      <li >
+        <a href="/signup">Sign up!</a>
+      </li>
+    </ul>
+  </div>
+  <div class="text-center" style="color: white">© 2018 Copyright:
+    <a href="landing.html"> Sync.com</a>
+  </div>
+  
+
+</footer>
+
+</div> <!-- last div-->
+
+
+
+
+<script  src="java.js">
+</script>
+
+
+
+<body>
+</html>

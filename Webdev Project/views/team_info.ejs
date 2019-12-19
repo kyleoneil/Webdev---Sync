@@ -1,0 +1,173 @@
+
+<html>
+        <head>
+        <title>Sync</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" type="text/css" href="/style2.css">
+</head>
+        
+        <body>
+        
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+           <a href="/main">Main</a>
+          <a href="/tournaments">Tournaments</a>
+          <a href="/Recruitment">Player Recruitment</a>
+          <a href="/application">Team Application</a>
+          <a href="/aboutus2">About Us</a>
+        
+        </div>
+            <div id="all"> <!--put all codes inside this div-->
+        
+        <nav class="navbar navbar-default" style="opacity:.8">
+          <div class="container-fluid">
+          
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                 <li id="active" onclick="openNav()">&#9776; SYNC</li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                 <li class="log"><a href="/ownProfile" style="color:white">Profile</a></li>
+                 <li class="log"><a href="/landing" style="color:white">Logout</a></li>
+              </ul>
+        
+              <form class="navbar-form navbar-right">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search" style="width:350px">
+                </div>
+               
+              </form>
+        
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="jumbotron jumbotron-fluid head">
+        <h1>Team Profile</h1>
+        </div>
+        
+        <div class="container-fluid">
+        <div class="row">
+        
+        <div class="col-md-2 col-sm-3" style="margin-top:5%">
+         <!--left side-->
+        </div>
+        
+        <div class="container col-md-8 col-sm-6 news" style="margin-top:5%">
+          <div class="row" style='background-color: rgb(255,255,255,.8)'>
+            
+            <div class="col-md-10 col-sm-10">
+                  <h3 style="margin-left:1%">Sort by: </h3>
+                   <nav class="select" style="margin-top:-4%">
+                         <ul class="drop-down closed">
+                            <li><a href="#0"class="nav-button">Recent</a></li>
+                            <li><a href="#">Game</a></li>
+                              <li><a href="#">Alphabetically</a></li>
+                            <li><a href="#">Oldest</a></li>
+                        </ul>
+                  </nav>
+              </div>
+              
+             <div class="col-md-1  col-sm-2" >
+                    <a href="/blogs/<%= blog._id %>/editteam"  class="r-link ai-element ai-element_type1 ai-element1" style="margin-top:20%;height:2.8%">
+                      <button ><span class="ai-element__label" >Update</span></button>
+                    </a>
+                </nav>
+              </div>
+
+                    
+             <div class="col-md-1 col-sm-2">
+                    <form id="delete" action ="/blogs/<%=blog._id%>?_method=DELETE"  method ="POST" class="r-link ai-element ai-element_type1 ai-element1" style="margin-top:20%">
+                     <button><span class="ai-element__label">Delete</span></button> 
+                   </form>
+                </nav>
+              </div>
+        
+           </div>
+        
+          <!--2ndrow-->
+          <div class="row" style="background-color: rgb(17,12,17,.7);border-bottom:2px dotted blue">
+                <div class="col-md-10 col-sm-5 col-md-offset-1 col-sm-offset-1 col-xs-1">
+                    <div class="col-md-4 col-sm-2 col-xs-1">
+                    <a href="/blogs/<%= blog._id %>" ><img src="<%= blog.picture %>" class="logo">	</a>	
+                    </div>
+                    <div class="col-md-2 col-sm-1 col-xs-1">
+                        <h2 class="teamName"><%= blog.teamname %></h2>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-1" >
+                        <h4 class="Looking"><%= blog.game %></h4><
+                    </div>
+                    <div class="col-md-4 col-sm-2 col-xs-1">
+                        <ul class="listofreq">
+                                <li><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.locality %></span></span></li>
+                        <li> <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.email %></span></span></li>
+                        <li><span class="glyphicon glyphicon-phone" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.contact %></span></span></li>
+                        <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.captainname %></span></span></li>
+                        </ul>	
+                    </div>
+                  <div class="col-md-1 col-sm-1 col-xs-1">
+               <!--</div>-->   
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!--end of 2ndrow-->
+        
+         
+          <div class="col-md-2 col-sm-3">
+          <!--right side-->
+          </div>
+        </div><!--container-->
+        </div><!--fluidcontainer-->
+        
+        
+        <nav style="margin-left:50%">
+                  <ul class="pagination" >
+                    <li class="enabled"><a href="teamapp" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span></a></li>
+                </nav>
+  
+         
+        <footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%;margin-left:-1%;margin-right:-1%;height:30%">
+        
+          <div class="container-fluid" style="margin-top:-2%">
+             <div class="row">
+                  <h3 style="font-family: 'McLaren', cursive;color:white;padding:2%;text-align:center">Contact us</h3>
+                     <ul class="list-inline" style="margin-left:10%;margin-right:5%" >
+                        <div class="col-md-3 col-sm-6">
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <li class="contacts">  <img src="/email.png" class="contacticon2">kyleoneil05@gmail.com</li>
+                          <li class="contacts"> <img src="/email.png" class="contacticon2">eunieljamero01@gmail.com</li>
+                        </div>
+                          <div class="col-md-3 col-sm-6">
+                           <li class="contacts"> <img src="/phone.png" class="contacticon2">09958930663 (Globe)</li>
+                           <li class="contacts"> <img src="/phone.png" class="contacticon2">09239269580 (Sun)</li>
+                           <li class="contacts"><img src="/phone.png" class="contacticon2">09182408852 (Smart)</li>
+                          </div>
+             
+                       </ul>
+              </div>
+        
+          </div>
+          <div class="text-center" style="color: white;margin-top:1%">© 2018 Copyright:
+            <a href="/landing"> Sync.com</a>
+          </div>
+        
+        </footer>
+        
+        </div><!--end of all-->
+        
+        
+     
+        <script src="/java.js">
+        
+        </script>
+        </body>
+        </html>

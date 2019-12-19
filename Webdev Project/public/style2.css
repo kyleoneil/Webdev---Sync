@@ -1,0 +1,87 @@
+
+.head{
+background-color:rgb(255, 0, 0,0.0);
+	color:white;
+	text-align:center;
+	margin-top:1%;
+	border-bottom: 5px groove white;
+	max-width: 50%;
+	margin-left: 25%;
+	font-family:'Quicksand',sans-serif;
+	font-size: 
+}
+
+
+.drop-down {
+	margin-top: -3%;
+  list-style: none; 
+  overflow: hidden; 
+  height: 172px; 
+  background-color: #34495e;
+  font-family: 'Roboto',sans-serif;
+  width: 200px;
+  margin-left: 11%; 
+    padding: 0;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+}
+nav .drop-down.closed {
+  height: 43px;
+}
+
+nav .drop-down li {
+  border-bottom: 5px solid #2c3e50;
+}
+
+nav .drop-down li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px; 
+}
+
+nav .drop-down li:first-child a:after {
+  content: "\25BC";
+  float: right;
+   margin-left: -30px;
+  margin-right: 5px;
+}
+.logo{
+	width:8vw;
+	padding:2%;
+	
+}
+.teamName{
+	color:white;
+	font-size: 40px;
+	text-align: center;
+	font-family:'Quicksand',sans-serif;
+	margin-top: 25%;
+  margin-left: -100%;
+}
+.Looking{
+	font-size: 30px;
+	text-align: center;
+	color: lightblue;
+	margin-left: 50%;
+	margin-top: 100%;
+}
+.listofreq{
+	font-size: 15px;
+	color: white;
+	list-style-type: none;
+	margin-top: 10%;
+	margin-left: 25%;
+
+}
+
+/*.req{
+	text-align: center;
+	color: white;
+	margin-top: 10%;
+}*/
+.detailsT{
+  font-family: 'Quicksand',sans-serif;
+  margin-left: -5%;
+
+}
