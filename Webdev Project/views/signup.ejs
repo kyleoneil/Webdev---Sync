@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<Head>
+	<title>Sign-up!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style = "background:url(https://miro.medium.com/max/5376/1*Gbl4AlUGHhvF7-HvUB_jsg.jpeg)no-repeat center center fixed;background-size: cover">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/landing">Main</a>
+  <a href="/login">Tournaments</a>
+  <a href="/login">Player Recruitment</a>
+  <a href="/login">Team Application</a>
+  <a href="/aboutus">About Us</a>
+</div>
+
+<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="log"><a href="/login" style="color:white">Login</a></li>
+         <li class="log"><a href="/signup" style="color:white">Signup</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" style="float:right; background-color: rgb(255,255,255,.9); padding:6%;border-radius:5%;margin-right:12%;margin-top:4%">
+
+<form action="/signup" method="post">
+
+  <div class="form-group">
+    <label >Username</label>
+    <input type="username" class="form-control"  placeholder="Name" name="username">
+
+  </div>
+  <div class="form-group">
+    <label >Steam profile</label>
+    <input type="surname" class="form-control"  placeholder="Steam Profile" name="IGN">
+  </div>
+  <div class="form-group">
+    <label >Email address</label>
+    <input type="email" class="form-control"  placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label >Password</label>
+    <input type="password" class="form-control"  placeholder="Password" name="password" >
+  </div>
+
+ <!--<div class="form-group">
+    <label >Re-type Password</label>
+    <input type="password2" class="form-control" placeholder="Re-type Password" name="password2" >
+  </div>
+  
+  <!-- <div class="checkbox">
+  <label>
+      <input type="checkbox"> Agree to terms and conditions</input>
+    </label>
+  </div>
+-->
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+</div>
+
+<div class="jumbotron jumbotron-fluid" style="background-color:rgb(255, 0, 0,0.0);color:white;text-align:center;margin-top:10%;margin-right:55%">
+  <div class="container">
+    <h1 class="display-4">Sign-up!</h1>
+    <p class="lead">Get ready warrior</p>
+    <button type="button" onclick="window.location.href = '/landing'"class="btn btn-default btn-transparent" style="background-color:rgb(255, 0, 0,0.0);color:white" >Retreat!</button>
+  </div>
+</div>
+</div>
+<script  src="java.js">
+ /*function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("passwordCheck").value;
+        if (password != passwordCheckword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }*/
+</script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sync</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+
+.head{
+  background-color:rgb(255, 0, 0,0.0);
+	color:white;
+	text-align:center;
+	margin-top:1%;
+	border-bottom: 5px groove white;
+	max-width: 50%;
+	margin-left: 25%;
+	font-family:'Quicksand',sans-serif;
+	/* font-size:  */
+}
+
+
+.drop-down {
+	margin-top: -3%;
+  list-style: none; 
+  overflow: hidden; 
+  height: 172px; 
+  background-color: #34495e;
+  font-family: 'Roboto',sans-serif;
+  width: 200px;
+  margin-left: 11%; 
+    padding: 0;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+}
+nav .drop-down.closed {
+  height: 43px;
+}
+
+nav .drop-down li {
+  border-bottom: 5px solid #2c3e50;
+}
+
+nav .drop-down li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px; 
+}
+
+nav .drop-down li:first-child a:after {
+  content: "\25BC";
+  float: right;
+   margin-left: -30px;
+  margin-right: 5px;
+}
+.logo{
+	width:8vw;
+	padding:2%;
+	
+}
+.teamName{
+	color:white;
+	font-size: 40px;
+	text-align: center;
+	font-family:'Quicksand',sans-serif;
+	margin-top: 25%;
+  margin-left: -100%;
+}
+.Looking{
+	font-size: 30px;
+	text-align: center;
+	color: lightblue;
+	margin-left: 50%;
+	margin-top: 100%;
+}
+.listofreq{
+	font-size: 15px;
+	color: white;
+	list-style-type: none;
+	margin-top: 10%;
+	margin-left: 25%;
+
+}
+
+/*.req{
+	text-align: center;
+	color: white;
+	margin-top: 10%;
+}*/
+.detailsT{
+  font-family: 'Quicksand',sans-serif;
+  margin-left: -5%;
+
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="/main">Main</a>
+  <a href="/tournaments">Tournaments</a>
+  <a href="/Recruitment">Player Recruitment</a>
+  <a href="/application">Team Application</a>
+  <a href="/aboutus2">About Us</a>
+
+</div>
+	<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="log"><a href="/ownProfile" style="color:white">Profile</a></li>
+         <li class="log"><a href="/landing" style="color:white">Logout</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid head">
+<h1>Team Application</h1>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-2 col-sm-3" style="margin-top:5%">
+ <!--left side-->
+</div>
+
+<div class="container col-md-8 col-sm-6 news" style="margin-top:5%">
+  <div class="row" style='background-color: rgb(255,255,255,.8)'>
+    
+    <div class="col-md-10 col-sm-10">
+      	<h3 style="margin-left:1%">Sort by: </h3>
+       	<nav class="select" style="margin-top:-4%">
+ 		        <ul class="drop-down closed">
+  			      <li><a href="#0"class="nav-button">Recent</a></li>
+  			      <li><a href="#">Game</a></li>
+   		     	  <li><a href="#">Alphabetically</a></li>
+  			      <li><a href="#">Oldest</a></li>
+  		      </ul>
+	      </nav>
+      </div>
+
+     <div class="col-md-2 col-sm-2">
+            <a href="/createteam"  class="r-link ai-element ai-element_type1 ai-element1" style="margin-top:10%">
+              <span class="ai-element__label">Create a team now!</span>
+           </a>
+        </nav>
+      </div>
+
+   </div>
+
+  <!--2ndrow-->
+  <% blogs.forEach((blog) => { %>
+  <div class="row" style="background-color: rgb(17,12,17,.7);border-bottom:2px dotted blue">
+    <div class="col-md-10 col-sm-5 col-md-offset-1 col-sm-offset-1 col-xs-1">
+    	<div class="col-md-4 col-sm-2 col-xs-1">
+        
+    	<a href="/blogs/<%= blog._id %>"> <img src="<%= blog.picture %>" class="logo">		</a>
+    	</div>
+    	<div class="col-md-2 col-sm-1 col-xs-1" >
+    		<h2 class="teamName" style="color:rgb(152,251,152)"><%= blog.teamname %></h2>
+    	</div>
+    	<div class="col-md-1 col-sm-1 col-xs-1" >
+    		<h4 class="Looking"><%= blog.game %></h4><
+    	</div>
+    	<div class="col-md-4 col-sm-2 col-xs-1">
+    		<ul class="listofreq">
+    				<li><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.locality %></span></span></li>
+            <li> <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.email %></span></span></li>
+            <li><span class="glyphicon glyphicon-phone" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.contact %></span></span></li>
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT"><%= blog.captainname %></span></span></li>
+    		</ul>	
+    	</div>
+      <div class="col-md-1 col-sm-1 col-xs-1">
+          <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default Tourna_btn disabled" data-toggle="modal" data-target="#myModal" style="margin-top:100%" >Apply!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="color: black;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color: black;">Player Recruitment Form</h4>
+        </div>
+        <div class="modal-body">
+          <div class="btn-group">
+            
+            <form>
+               <fieldset>
+                 <h5 style="text-align: left;">
+                    Type of Game:
+                    <select id = "myList">
+                    <option value = "DOTA_2">DOTA 2</option>
+                    <option value = "CSGO">CSGO</option>
+                  </select>
+                </h5>
+              </fieldset>
+            </form>
+
+            <div class="input-group input-group-sm">
+              <span style="color: black;">Additional Information:</span>
+            </div>
+
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3" required>Reason (Optional):</span>
+              <input type="text" class="form-control" aria-describedby="sizing-addon3">
+            </div>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal " data-toggle="modal" data-target="#myModal2">Proceed
+            </button>
+
+            <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="alert alert-success" role="alert">
+                      <strong style="text-align: left;">Invite Sent!</strong>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+          </div> <!-- /Modal-Footer-->
+        </div> <!-- /Modal-Body -->
+      </div> <!-- /Modal-Content -->
+    </div> <!-- /Modal-Dialogue -->
+  </div> <!-- /Modal -->
+      </div>
+    </div>
+  </div>
+  <% }); %>
+  <div class="row" style="background-color: rgb(17,12,17,.7);border-bottom:2px dotted blue">
+    <div class="col-md-10 col-sm-5 col-md-offset-1 col-sm-offset-1 col-xs-1">
+    	<div class="col-md-4 col-sm-2 col-xs-1">
+    		 <img src="logo.png" class="logo">		
+    	</div>
+    	<div class="col-md-2 col-sm-1 col-xs-1">
+  <h2 class="teamName">Team Lorem</h2>
+    	</div>
+    	<div class="col-md-1 col-sm-1 col-xs-1">
+    		<h4 class="Looking">Dota2</h4><
+    	</div>
+    	<div class="col-md-4 col-sm-2 col-xs-1">
+    		<ul class="listofreq">
+    				<li><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">Cebu City</span></span></li>
+            <li> <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">loremipsum@gmail.com</span></span></li>
+            <li><span class="glyphicon glyphicon-phone" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">09134569982</span></span></li>
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">Praying Mantis</span></span></li>
+    		</ul>	
+    	</div>
+      <div class="col-md-1 col-sm-1 col-xs-1">
+          <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default Tourna_btn" data-toggle="modal" data-target="#myModal" style="margin-top:100%">Apply!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="color: black;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color: black;">Player Recruitment Form</h4>
+        </div>
+        <div class="modal-body">
+          <div class="btn-group">
+            
+            <form>
+               <fieldset>
+                 <h5 style="text-align: left;">
+                    Type of Game:
+                    <select id = "myList">
+                    <option value = "DOTA_2">DOTA 2</option>
+                    <option value = "CSGO">CSGO</option>
+                  </select>
+                </h5>
+              </fieldset>
+            </form>
+
+            <div class="input-group input-group-sm">
+              <span style="color: black;">Additional Information:</span>
+            </div>
+
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3" required>Reason (Optional):</span>
+              <input type="text" class="form-control" aria-describedby="sizing-addon3">
+            </div>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal " data-toggle="modal" data-target="#myModal2">Proceed
+            </button>
+
+            <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="alert alert-success" role="alert">
+                      <strong style="text-align: left;">Invite Sent!</strong>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+          </div> <!-- /Modal-Footer-->
+        </div> <!-- /Modal-Body -->
+      </div> <!-- /Modal-Content -->
+    </div> <!-- /Modal-Dialogue -->
+  </div> <!-- /Modal -->
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color: rgb(17,12,17,.7);border-bottom:2px dotted blue">
+    <div class="col-md-10 col-sm-5 col-md-offset-1 col-sm-offset-1 col-xs-1">
+    	<div class="col-md-4 col-sm-3 col-xs-3">
+    		 <img src="logo.png" class="logo">		
+    	</div>
+    	<div class="col-md-2 col-sm-2  col-xs-2">
+    		<h2 class="teamName">Ipsum</h2>
+    	</div>
+    	<div class="col-md-1 col-sm-2 col-xs-2">
+    		<h4 class="Looking">CSGO</h4>
+    	</div>
+    	<div class="col-md-4 col-sm-3 col-xs-2">
+    		<ul class="listofreq">
+    			<li><span class="glyphicon glyphicon-home" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">Cebu City</span></span></li>
+            <li> <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">ritzs@gmail.com</span></span></li>
+            <li><span class="glyphicon glyphicon-phone" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">09165485966</span></span></li>
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true" style="margin-left:-20%"> <span class="detailsT">Kokyu</span></span></li>
+    		</ul>	
+    	</div>
+      <div class="col-md-1 col-sm-2 col-xs-2">
+          <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default Tourna_btn" data-toggle="modal" data-target="#myModal" style="margin-top:100%">Apply!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="color: black;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color: black;">Player Recruitment Form</h4>
+        </div>
+        <div class="modal-body">
+          <div class="btn-group">
+            
+            <form>
+               <fieldset>
+                 <h5 style="text-align: left;">
+                    Type of Game:
+                    <select id = "myList">
+                    <option value = "DOTA_2">DOTA 2</option>
+                    <option value = "CSGO">CSGO</option>
+                  </select>
+                </h5>
+              </fieldset>
+            </form>
+
+            <div class="input-group input-group-sm">
+              <span style="color: black;">Additional Information:</span>
+            </div>
+
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3" required>Reason (Optional):</span>
+              <input type="text" class="form-control" aria-describedby="sizing-addon3">
+            </div>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal " data-toggle="modal" data-target="#myModal2">Proceed
+            </button>
+
+            <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="alert alert-success" role="alert">
+                      <strong style="text-align: left;">Invite Sent!</strong>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+          </div> <!-- /Modal-Footer-->
+        </div> <!-- /Modal-Body -->
+      </div> <!-- /Modal-Content -->
+    </div> <!-- /Modal-Dialogue -->
+  </div> <!-- /Modal -->
+      </div>
+    </div>
+  </div>
+<!--end of 2ndrow-->
+
+ 
+  <div class="col-md-2 col-sm-3">
+  <!--right side-->
+  </div>
+</div><!--container-->
+</div><!--fluidcontainer-->
+
+
+<nav style="margin-left:44%">
+          <ul class="pagination" >
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+            <li class="enabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+          </ul>
+        </nav>
+    
+<footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%;margin-left:-1%;margin-right:-1%">
+
+  <div class="container-fluid" style="margin-top:-2%">
+     <div class="row">
+          <h3 style="font-family: 'McLaren', cursive;color:white;padding:2%;text-align:center">Contact us</h3>
+             <ul class="list-inline" style="margin-left:10%;margin-right:5%" >
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <li class="contacts">  <img src="email.png" class="contacticon">kyleoneil05@gmail.com</li>
+                  <li class="contacts"> <img src="email.png" class="contacticon">eunieljamero01@gmail.com</li>
+                </div>
+                  <div class="col-md-3 col-sm-6">
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09958930663 (Globe)</li>
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09239269580 (Sun)</li>
+                   <li class="contacts"><img src="phone.png" class="contacticon">09182408852 (Smart)</li>
+                  </div>
+     
+               </ul>
+      </div>
+
+  </div>
+  <div class="text-center" style="color: white;margin-top:1%">© 2018 Copyright:
+    <a href="/landing"> Sync.com</a>
+  </div>
+
+</footer>
+</div><!--end of all-->
+
+
+
+<script src="java.js">
+
+</script>
+</body>
+</html>

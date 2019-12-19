@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sync</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+
+
+.thumbnail{
+  margin-left:25%;
+  margin-top: 2%;
+}
+.bord{
+  border-style: double;
+
+}
+
+.headnews{
+  text-align: center;
+  color: black;
+  padding: 3%;
+  font-family: 'McLaren', cursive;
+  font-size: 3.5vw;
+}
+.news{
+  border-style:double;
+  border-color:#107dac;
+  border-width: 10px;
+}
+.left{
+ border-right: 1px dotted #107dac;
+
+}
+.subheadnews{
+  font-family: 'McLaren', cursive;
+  font-size: 1.7vw;
+  color:white;
+  border-bottom: 3px groove red;
+  margin-right: 22%;
+  padding: 3%;
+}
+.details{
+  font-size: 1vw;
+  color: white;
+ 
+}
+
+</style>
+</head>
+<body>
+	
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/main">Main</a>
+  <a href="/tournaments">Tournaments</a>
+  <a href="/Recruitment">Player Recruitment</a>
+  <a href="/application">Team Application</a>
+  <a href="/aboutus2">About Us</a>
+
+</div>
+	<div id="all"> <!--put all codes inside this div-->
+
+<nav class="navbar navbar-default" style="opacity:.8">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li id="active" onclick="openNav()">&#9776; SYNC</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="log"><a href="/ownProfile" style="color:white">Profile</a></li>
+         <li class="log"><a href="/landing" style="color:white">Logout</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" style="width:350px">
+        </div>
+       
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid" style="background-color:rgb(255, 0, 0,0.0);color:white;text-align:center;margin-top:2%">
+  <div class="container">
+    <h1 class="display-4" style="font-family:Quicksand,sans-serif">Sync</h1>
+    <p class="lead" style="font-family:Quicksand,sans-serif;padding:2.5%;margin-top:2%">Compete with over <span style="color:red">30 million</span> Filipino Gamers</p>
+
+ 
+<div class="row" style="margin-top:4%;background-color:rgb(51,51,51,.7)">
+
+  <div class="col-xs-3 col-md-3">
+    <a href="/Application" class="thumbnail">
+      <img src="dude.png" >
+    </a>
+    <div class="caption" style="margin-top:10%">
+        <h4>Players</h4>
+      </div>
+  </div>
+
+   <div class="col-xs-3 col-md-3  bord">
+    <a href="/tournaments" class="thumbnail">
+      <img src="trophy.png">
+    </a>
+   <div class="caption" style="margin-top:12%">
+       <h4>Tournaments</h4>
+        
+      </div>
+  </div>
+   <div class="col-xs-3 col-md-3 ">
+    <a href="/tournaments" class="thumbnail">
+      <img src="tv.png" >
+    </a>
+      <div class="caption" style="margin-top:14%">
+     <h4>Live Streams</h4>
+   
+      </div>
+  </div>
+
+   <div class="col-xs-3 col-md-3 bord">
+    <a href="/Recruitment" class="thumbnail">
+      <img src="dudes.png" >
+    </a>
+      <div class="caption" style="margin-top:20%">
+        <h4>Teams</h4>
+      </div>
+  </div>
+</div>
+
+ </div>
+
+</div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 col-sm-3" style="margin-top:5%">
+ <!--left side-->
+</div>
+
+<div class="container col-md-8 col-sm-6 news" style="margin-top:5%">
+  <div class="row" style='background-color: rgb(255,255,255,.8)'>
+  <h2 class="headnews">News and Events</h2>
+  </div>
+
+
+  <!--2ndrow-->
+  <div class="row" style="background-color: rgb(17,12,17,.7)">
+    <div class="col-md-6 col-sm-6 left" >
+
+   <div class="row">
+   <img src="tnc2.jpg" style="float:left;max-width:100%;padding:3%;padding-bottom:0%">
+   </div>
+
+   <div class="row">
+ <img src="tnc.jpg" style="float:right;max-width:100%;padding:3%">
+   </div>
+
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <h4 class="subheadnews">TNC Predator take down Gambit Esports to win ESL One Hamburg</h4>
+      <p class="details">A hot start turned into an incredible run that was almost halted at the last second, but TNC Predator managed to pull out of a close Dota 2 series against Gambit Esports to close out ESL One Hamburg with a first-place finish. <br> <br> Gambit started the day having to fight through Alliance just to make it into the grand finals. But after two games where each team took a decisive win quickly, the CIS squad survived a marathon game three. After downing one of the early favorites, Artsiom “fng” Barshack and his crew were ready to take revenge on TNC.
+      <br><br> That revenge story did not start off on a good foot. TNC absolutely crushed Gambit, despite Danil “gpk” Skutin having a strong showing on Storm Spirit. Fng and Maxim “Shachlo” Abramovskikh barely got to play the game after the Southeast Asian squad shut them down and walked to a 23-minute win.
+After being dismantled, Gambit didn’t let the loss rattle them like what happened in winner’s finals. Instead, the players rallied together behind gpk, pairing his Ember Spirit with Kiyalbek “dream`” Tayirov’s Gyrocopter. That combo was enough to flip the lanes in their favor as Gambit collapsed on Kim “Gabbi” Villafuerte and Park “March” Tae-won.</p>
+    </div>
+  </div>
+<!--end of 2ndrow-->
+<!--3rdrow-->
+
+<div class="row" style="background-color: rgb(17,12,17,.7)">
+<div class="col-md-12">
+<a href="https://www.lazada.com.ph/"><img src="lazada.jpg" style="max-width:100%; padding:1%"></a>
+</div>
+</div>
+<!--end of 3rdrow-->
+ <!--4throw-->
+<div class="row" style="background-color: rgb(17,12,17,.7)">
+    <div class="col-md-6 col-sm-6 left" >
+
+   <div class="row">
+   <img src="thunder.png" style="float:left;max-width:100%;padding:3%;padding-bottom:0%">
+   </div>
+
+   <div class="row">
+ <img src="thunder2.jpg" style="float:right;max-width:100%;padding:3%">
+   </div>
+
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <h4 class="subheadnews">Top prizes and large crowds in the recently concluded 2019 Thunder Esports Tour</h4>
+      <p class="details">Crowds and fans gathered in full force at the SM City North Edsa The Annex Cyberzone during the action-packed Grand Finals weekend of the Thunder Esports Tour last August 31 to September 1 presented by Coca-Cola Philippines’ Thunder Super Sodaand organized by MET Events, the Thunder Esports Tour is a nationwide esports tournament for all aspiring Dota 2, Counter-Strike: Global Offensive, and Mobile Legends: Bang Bang players in Luzon, Visayas, and Mindanao. <br><br> With a prize pool of 1 million pesos, the Thunder Esports Tour kicked-off at SM CDO Uptown in Cagayan De Oro, followed by legs held at SM City San Fernando in Pampanga and SM Seaside Cebu, with players battling it out for the chance to compete in the Grand Finals.
+
+“Globally, the Company has been on a journey with the eSports stars, athletes, and fans as early as 2010. At that time, Coca-Cola was one of the first global brands that supported the non-traditional sport,” shares Jessie Ericta, Coca-Cola Philippines Senior Brand Manager for Thunder Supersoda.</p>
+    </div>
+  </div>
+ <!--end of 4throw-->
+  <div class="col-md-2 col-sm-3">
+  <!--right side-->
+  </div>
+</div><!--container-->
+</div><!--fluidcontainer-->
+
+<footer class="page-footer" style="background-color:rgb(40, 40, 41,0.8);padding:1%;margin-left:-1%;margin-right:-1%">
+
+  <div class="container-fluid" style="margin-top:-2%">
+     <div class="row">
+          <h3 style="font-family: 'McLaren', cursive;color:white;padding:2%;text-align:center">Contact us</h3>
+             <ul class="list-inline" style="margin-left:10%;margin-right:5%" >
+                <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <li class="contacts">  <img src="email.png" class="contacticon">kyleoneil05@gmail.com</li>
+                  <li class="contacts"> <img src="email.png" class="contacticon">eunieljamero01@gmail.com</li>
+                </div>
+                  <div class="col-md-3 col-sm-6">
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09958930663 (Globe)</li>
+                   <li class="contacts"> <img src="phone.png" class="contacticon">09239269580 (Sun)</li>
+                   <li class="contacts"><img src="phone.png" class="contacticon">09182408852 (Smart)</li>
+                  </div>
+     
+               </ul>
+      </div>
+
+  </div>
+  <div class="text-center" style="color: white;margin-top:1%">© 2018 Copyright:
+    <a href="/landing"> Sync.com</a>
+  </div>
+
+</footer>
+
+</div><!-- all-->
+<script src="java.js"></script>
+</body>
+</html>
